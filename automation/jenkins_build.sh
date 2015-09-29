@@ -2,7 +2,7 @@
 
 # Jenkins build steps
 
-for ARCH in ARCHS
+for ARCH in $ARCHS
 do
 	case "$ARCH" in
 		'armv6hf')

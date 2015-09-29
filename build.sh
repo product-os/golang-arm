@@ -20,10 +20,6 @@ if version_cmp $GOLANG_VERSION "1.5"; then
 	export GOROOT_BOOTSTRAP=/go-bootstrap
 fi
 
-if [ $ARCH == "armv6hf" ]; then
-	
-fi
-
 case "$ARCH" in
 	'armv6hf')
 		export GOARM=6
