@@ -8,11 +8,15 @@ GOROOT_BOOTSTRAP_VERSION=1.4.3
 TAR_FILE=go-v$GOLANG_VERSION-linux-$ARCH.tar.gz
 BUCKET_NAME=$BUCKET_NAME
 
+COMMIT_1.4.3='50eb39bb23e8b03e823c38e844f0410d0b5325d2'
+COMMIT_1.5.1='f2e4c8b5fb3660d793b2c545ef207153db0a34b1'
+COMMIT_1.5.2='40cbf58f960a8f5287d2c3a93b3ca6119df67e85'
+
 # comparing version: http://stackoverflow.com/questions/16989598/bash-comparing-version-numbers
-function version_cmp() { test "$(echo "$@" | tr " " "\n" | sort -V | tail -n 1)" == "$1"; }
+function version_le() { test "$(echo "$@" | tr " " "\n" | sort -V | tail -n 1)" == "$1"; }
 
 # in order to build Go 1.5, need to download Go 1.4 first
-if version_cmp $GOLANG_VERSION "1.5"; then
+if version_le $GOLANG_VERSION "1.5"; then
 	mkdir /go-bootstrap
 	wget http://resin-packages.s3.amazonaws.com/golang/v$GOROOT_BOOTSTRAP_VERSION/go-v$GOROOT_BOOTSTRAP_VERSION-linux-$ARCH.tar.gz
 	tar -xzf "go-v$GOROOT_BOOTSTRAP_VERSION-linux-$ARCH.tar.gz" -C /go-bootstrap --strip-components=1
@@ -28,10 +32,16 @@ case "$ARCH" in
 		export GOARM=7
 	;;
 esac
+
 # compile Go
 echo $GOARM
-cd go/src \
-	&& git checkout go$GOLANG_VERSION \
+cd go && git checkout COMMIT_$GOLANG_VERSION
+
+if version_le "1.5.2" $GOLANG_VERSION; then
+	patch -p1 < /patches/golang-$GOLANG_VERSION.patch
+fi
+
+cd src \
 	&& ./make.bash --no-clean 2>&1 \
 	&& cd / \
 	&& tar -cvzf go-v$GOLANG_VERSION-linux-$ARCH.tar.gz go/*
