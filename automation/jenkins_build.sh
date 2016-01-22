@@ -11,6 +11,9 @@ do
 		'armv7hf')
 			sed -i -e s~#{FROM}~resin/armv7hf-debian:latest~g Dockerfile
 		;;
+		'armel')
+			sed -i -e s~#{FROM}~resin/armel-debian:latest~g Dockerfile
+		;;
 	esac
 	docker build --no-cache=true -t go-$ARCH-builder .
 	for GO_VERSION in $GO_VERSIONS
