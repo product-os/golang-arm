@@ -31,6 +31,9 @@ case "$ARCH" in
 	'armv7hf')
 		export GOARM=7
 	;;
+	'armel')
+		export GOARM=5
+	;;
 esac
 
 # compile Go
