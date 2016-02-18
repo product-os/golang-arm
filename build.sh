@@ -42,7 +42,7 @@ echo $GOARM
 COMMIT=COMMIT_${GOLANG_VERSION//./_}
 cd go && git checkout $(eval echo \$$COMMIT)
 
-if version_le "1.5.2" $GOLANG_VERSION; then
+if version_le "1.5.1" $GOLANG_VERSION; then
 	patch -p1 < /patches/golang-$GOLANG_VERSION.patch
 fi
 
