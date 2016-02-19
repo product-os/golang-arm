@@ -49,8 +49,13 @@ fi
 cd src \
 	&& ./make.bash --no-clean 2>&1 \
 	&& cd / \
-	&& tar -cvzf go-v$GOLANG_VERSION-linux-$ARCH.tar.gz go/*
+	&& tar -cvzf $TAR_FILE go/*
+
+curl -SLO "http://resin-packages.s3.amazonaws.com/SHASUMS256.txt"
+sha256sum $TAR_FILE >> SHASUMS256.txt
 
 # Upload to S3 (using AWS CLI)
 printf "$ACCESS_KEY\n$SECRET_KEY\n$REGION_NAME\n\n" | aws configure
 aws s3 cp $TAR_FILE s3://$BUCKET_NAME/golang/v$GOLANG_VERSION/
+aws s3 cp SHASUMS256.txt s3://$BUCKET_NAME/
+
