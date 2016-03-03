@@ -5,7 +5,7 @@ set -e
 GOLANG_VERSION=$1
 # Go 1.4 required to build Go 1.5
 GOROOT_BOOTSTRAP_VERSION=1.4.3
-TAR_FILE=go-v$GOLANG_VERSION-linux-$ARCH.tar.gz
+TAR_FILE=go$GOLANG_VERSION.linux-$ARCH.tar.gz
 BUCKET_NAME=$BUCKET_NAME
 
 COMMIT_1_4_3='50eb39bb23e8b03e823c38e844f0410d0b5325d2'
@@ -42,15 +42,20 @@ echo $GOARM
 COMMIT=COMMIT_${GOLANG_VERSION//./_}
 cd go && git checkout $(eval echo \$$COMMIT)
 
-if version_le "1.5.2" $GOLANG_VERSION; then
+if version_le "1.5.1" $GOLANG_VERSION; then
 	patch -p1 < /patches/golang-$GOLANG_VERSION.patch
 fi
 
 cd src \
 	&& ./make.bash --no-clean 2>&1 \
 	&& cd / \
-	&& tar -cvzf go-v$GOLANG_VERSION-linux-$ARCH.tar.gz go/*
+	&& tar -cvzf $TAR_FILE go/*
+
+curl -SLO "http://resin-packages.s3.amazonaws.com/SHASUMS256.txt"
+sha256sum $TAR_FILE >> SHASUMS256.txt
 
 # Upload to S3 (using AWS CLI)
 printf "$ACCESS_KEY\n$SECRET_KEY\n$REGION_NAME\n\n" | aws configure
 aws s3 cp $TAR_FILE s3://$BUCKET_NAME/golang/v$GOLANG_VERSION/
+aws s3 cp SHASUMS256.txt s3://$BUCKET_NAME/
+
