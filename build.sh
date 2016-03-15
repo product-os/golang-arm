@@ -42,10 +42,6 @@ echo $GOARM
 COMMIT=COMMIT_${GOLANG_VERSION//./_}
 cd go && git checkout $(eval echo \$$COMMIT)
 
-if version_le "1.5.1" $GOLANG_VERSION; then
-	patch -p1 < /patches/golang-$GOLANG_VERSION.patch
-fi
-
 cd src \
 	&& ./make.bash --no-clean 2>&1 \
 	&& cd / \
