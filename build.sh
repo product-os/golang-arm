@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -o pipefail
 
 # set env var
 GOLANG_VERSION=$1
@@ -20,9 +21,9 @@ function version_le() { test "$(echo "$@" | tr " " "\n" | sort -V | tail -n 1)" 
 # in order to build Go 1.5, need to download Go 1.4 first
 if version_le $GOLANG_VERSION "1.5"; then
 	mkdir /go-bootstrap
-	wget http://resin-packages.s3.amazonaws.com/golang/v$GOROOT_BOOTSTRAP_VERSION/go-v$GOROOT_BOOTSTRAP_VERSION-linux-$ARCH.tar.gz
-	tar -xzf "go-v$GOROOT_BOOTSTRAP_VERSION-linux-$ARCH.tar.gz" -C /go-bootstrap --strip-components=1
-	rm go-v$GOROOT_BOOTSTRAP_VERSION-linux-$ARCH.tar.gz
+	wget http://resin-packages.s3.amazonaws.com/golang/v$GOROOT_BOOTSTRAP_VERSION/go$GOROOT_BOOTSTRAP_VERSION.linux-$ARCH.tar.gz
+	tar -xzf "go$GOROOT_BOOTSTRAP_VERSION.linux-$ARCH.tar.gz" -C /go-bootstrap --strip-components=1
+	rm go$GOROOT_BOOTSTRAP_VERSION.linux-$ARCH.tar.gz
 	export GOROOT_BOOTSTRAP=/go-bootstrap
 fi
 
@@ -36,13 +37,27 @@ case "$ARCH" in
 	'armel')
 		export GOARM=5
 	;;
+	'alpine-armhf')
+		export GOARM=7
+	;;
+	'alpine-i386')
+		export GOARCH=386
+		export GOHOSTARCH=386
+	;;
 esac
 
 # compile Go
-echo $GOARM
+echo "GOARM: $GOARM"
+echo "GOARCH: $GOARCH"
 
 COMMIT=COMMIT_${GOLANG_VERSION//./_}
 cd go && git checkout $(eval echo \$$COMMIT)
+
+# There is an issue with musl libc and Go v1.6 on Alpine i386 image (https://github.com/golang/go/issues/14476)
+# So we need to patch Go (https://github.com/golang/go/commit/1439158120742e5f41825de90a76b680da64bf76)
+if [ $ARCH == "alpine-i386" ] && [ $GOLANG_VERSION == "1.6" ]; then
+	patch -p1 < /patches/golang-$ARCH-$GOLANG_VERSION.patch
+fi
 
 cd src \
 	&& ./make.bash --no-clean 2>&1 \
@@ -56,4 +71,3 @@ sha256sum $TAR_FILE >> SHASUMS256.txt
 printf "$ACCESS_KEY\n$SECRET_KEY\n$REGION_NAME\n\n" | aws configure
 aws s3 cp $TAR_FILE s3://$BUCKET_NAME/golang/v$GOLANG_VERSION/
 aws s3 cp SHASUMS256.txt s3://$BUCKET_NAME/
-
