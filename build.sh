@@ -11,6 +11,8 @@ BUCKET_NAME=$BUCKET_NAME
 COMMIT_1_4_3='50eb39bb23e8b03e823c38e844f0410d0b5325d2'
 COMMIT_1_5_1='f2e4c8b5fb3660d793b2c545ef207153db0a34b1'
 COMMIT_1_5_2='40cbf58f960a8f5287d2c3a93b3ca6119df67e85'
+COMMIT_1_5_3='27d5c0ede5b4411089f4bf52a41dd2f4eed36123'
+COMMIT_1_6='7bc40ffb05d8813bf9b41a331b45d37216f9e747'
 
 # comparing version: http://stackoverflow.com/questions/16989598/bash-comparing-version-numbers
 function version_le() { test "$(echo "$@" | tr " " "\n" | sort -V | tail -n 1)" == "$1"; }
@@ -41,10 +43,6 @@ echo $GOARM
 
 COMMIT=COMMIT_${GOLANG_VERSION//./_}
 cd go && git checkout $(eval echo \$$COMMIT)
-
-if version_le "1.5.1" $GOLANG_VERSION; then
-	patch -p1 < /patches/golang-$GOLANG_VERSION.patch
-fi
 
 cd src \
 	&& ./make.bash --no-clean 2>&1 \
