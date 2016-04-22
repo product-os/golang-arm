@@ -10,10 +10,10 @@ TAR_FILE=go$GOLANG_VERSION.linux-$ARCH.tar.gz
 BUCKET_NAME=$BUCKET_NAME
 
 # comparing version: http://stackoverflow.com/questions/16989598/bash-comparing-version-numbers
-function version_le() { test "$(echo "$@" | tr " " "\n" | sort -V | tail -n 1)" == "$1"; }
+function version_ge() { test "$(echo "$@" | tr " " "\n" | sort -V | tail -n 1)" == "$1"; }
 
 # in order to build Go 1.5, need to download Go 1.4 first
-if version_le $GOLANG_VERSION "1.5"; then
+if version_ge $GOLANG_VERSION "1.5"; then
 	mkdir /go-bootstrap
 	wget http://resin-packages.s3.amazonaws.com/golang/v$GOROOT_BOOTSTRAP_VERSION/go$GOROOT_BOOTSTRAP_VERSION.linux-$ARCH.tar.gz
 	echo "$(grep " go$GOROOT_BOOTSTRAP_VERSION.linux-$ARCH.tar.gz" /checksums-commit-table)" | sha256sum -c -
@@ -57,7 +57,7 @@ fi
 # Fix for https://golang.org/issue/14851. Apply on Go v1.5 and higher on Alpine.
 # Ref: https://github.com/docker-library/golang/commit/0f3ab4a3d2eba38991ab7b41941f1dc99f13dc3f
 if [[ $ARCH == *"alpine"* ]]; then
-	if version_le $GOLANG_VERSION "1.5"; then
+	if version_ge $GOLANG_VERSION "1.5"; then
 		patch -p1 < /patches/golang-alpine-no-pic.patch
 	fi
 fi
