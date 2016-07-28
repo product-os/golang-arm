@@ -45,9 +45,12 @@ esac
 echo "GOARM: $GOARM"
 echo "GOARCH: $GOARCH"
 
-commit=($(echo "$(grep " go$GOLANG_VERSION$" /checksums-commit-table)" | tr " " "\n"))
-cd go && git checkout ${commit[0]}
+mkdir go
+curl -SLO "https://storage.googleapis.com/golang/$GOLANG_VERSION.src.tar.gz"
+echo "$(grep " $GOLANG_VERSION.src.tar.gz" /checksums-commit-table)" | sha256sum -c -
+tar -xzvf $GOLANG_VERSION.src.tar.gz -C go --strip-components=1
 
+cd go
 # There is an issue with musl libc and Go v1.6 on Alpine i386 image (https://github.com/golang/go/issues/14476)
 # So we need to patch Go (https://github.com/golang/go/commit/1439158120742e5f41825de90a76b680da64bf76)
 if [ $ARCH == "alpine-i386" ] && [ $GOLANG_VERSION == "1.6" ]; then
