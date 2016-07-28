@@ -46,9 +46,9 @@ echo "GOARM: $GOARM"
 echo "GOARCH: $GOARCH"
 
 mkdir go
-curl -SLO "https://storage.googleapis.com/golang/$GOLANG_VERSION.src.tar.gz"
-echo "$(grep " $GOLANG_VERSION.src.tar.gz" /checksums-commit-table)" | sha256sum -c -
-tar -xzvf $GOLANG_VERSION.src.tar.gz -C go --strip-components=1
+curl -SLO "https://storage.googleapis.com/golang/go$GOLANG_VERSION.src.tar.gz"
+echo "$(grep " go$GOLANG_VERSION.src.tar.gz" /checksums-commit-table)" | sha256sum -c -
+tar -xzvf go$GOLANG_VERSION.src.tar.gz -C go --strip-components=1
 
 cd go
 # There is an issue with musl libc and Go v1.6 on Alpine i386 image (https://github.com/golang/go/issues/14476)

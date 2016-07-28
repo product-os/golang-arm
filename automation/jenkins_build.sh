@@ -24,7 +24,7 @@ do
 			sed -e s~#{FROM}~resin/amd64-alpine:latest~g Dockerfile.alpine.tpl > Dockerfile
 		;;
 	esac
-	docker build --no-cache=true -t go-$ARCH-builder .
+	docker build -t go-$ARCH-builder .
 	for GO_VERSION in $GO_VERSIONS
 	do
 		docker run --rm -e ARCH=$ARCH \
@@ -33,3 +33,6 @@ do
 						-e BUCKET_NAME=$BUCKET_NAME go-$ARCH-builder bash build.sh $GO_VERSION
 	done
 done
+
+# Clean up builder image after every run
+docker rmi -f go-$ARCH-builder
