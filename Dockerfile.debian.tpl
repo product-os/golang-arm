@@ -8,6 +8,4 @@ RUN apt-get -q update \
 # Install AWS CLI
 RUN pip install awscli
 
-RUN git clone https://go.googlesource.com/go
-
 COPY . /
