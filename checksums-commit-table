@@ -5,6 +5,7 @@ b969971dd5390af9839ee113b4ac051e9053e7c34387a1c1dc16a207bcd4d5f6  go1.4.3.linux-
 91e5c8ee3248d869977ce20342c265b3a62806188d5078f0e3a0a24c9094c0ea  go1.4.3.linux-alpine-i386.tar.gz
 d9ba0116db22b9711c36d42649387c6b84cfd932133c0e763a9d1ad770188a81  go1.4.3.linux-alpine-armhf.tar.gz
 0126aa246cec7f9489c97fd083da26db31680f36d9141b2f38a59efbc73b8946  go1.4.3.linux-alpine-amd64.tar.gz
+20c666025dd84dd7f2ec856aa5c0c104b6477c13b564113555b048a65e105306  go1.4.3.linux-i386.tar.gz
 ### This is a bootstrap ditribution for aarch64
 f7ed449e683f58b6cf3b4ccccd37db6cf7f7e8bcd85852859b707e22ac592002  go1.4.3.linux-aarch64.tar.gz
 

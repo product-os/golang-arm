@@ -17,6 +17,9 @@ do
 		'aarch64')
 			sed -e s~#{FROM}~resin/aarch64-debian:latest~g Dockerfile.debian.tpl > Dockerfile
 		;;
+		'i386')
+			sed -e s~#{FROM}~resin/i386-debian:latest~g Dockerfile.debian.tpl > Dockerfile
+		;;
 		'alpine-armhf')
 			sed -e s~#{FROM}~resin/armhf-alpine:latest~g Dockerfile.alpine.tpl > Dockerfile
 		;;
