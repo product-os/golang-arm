@@ -43,6 +43,10 @@ case "$ARCH" in
 		export GOARCH=386
 		export GOHOSTARCH=386
 	;;
+	'i386')
+		export GOARCH=386
+		export GOHOSTARCH=386
+	;;
 esac
 
 # compile Go
@@ -69,8 +73,14 @@ if [[ $ARCH == *"alpine"* ]]; then
 	fi
 fi
 
-cd src \
-	&& ./make.bash --no-clean 2>&1 \
+# Fix for i386 platforms without MMX instructions
+cd src
+if [[ $ARCH == *"386"* ]] && ( version_ge $GOLANG_VERSION "1.6" ); then
+	patch -p2 -i /patches/go$(expr match "$GOLANG_VERSION" '\([0-9]*\.[0-9]*\)')/0001-Revert-runtime-check-and-fail-early-with-a-message-i.patch
+	patch -p2 -i /patches/go$(expr match "$GOLANG_VERSION" '\([0-9]*\.[0-9]*\)')/0002-implement-atomic-quadword-ops-with-FILD-FISTP.patch
+fi
+
+./make.bash --no-clean 2>&1 \
 	&& cd / \
 	&& tar -cvzf $TAR_FILE go/*
 
