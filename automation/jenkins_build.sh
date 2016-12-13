@@ -36,7 +36,7 @@ do
 		docker run --rm -e ARCH=$ARCH \
 						-e ACCESS_KEY=$ACCESS_KEY \
 						-e SECRET_KEY=$SECRET_KEY \
-						-e BUCKET_NAME=$BUCKET_NAME go-$ARCH-builder bash build.sh $GO_VERSION
+						-e BUCKET_NAME=$BUCKET_NAME go-$ARCH-builder bash -ex build.sh $GO_VERSION
 	done
 done
 
