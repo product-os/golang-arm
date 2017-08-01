@@ -1,5 +1,7 @@
 FROM #{FROM}
 
+#{QEMU}
+
 RUN apt-get -q update \
 		&& apt-get install -y git-core build-essential mercurial gcc libc6-dev curl python python-dev python-pip wget ca-certificates libssl-dev --no-install-recommends \
 		&& apt-get clean \
