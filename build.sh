@@ -73,6 +73,12 @@ if [[ $ARCH == *"alpine"* ]]; then
 	fi
 fi
 
+# Fix for https://github.com/golang/go/issues/20763, Apply on Go v1.7 and v1.8.
+# Ref: https://github.com/golang/go/commit/2673f9ed23348c634f6331ee589d489e4d9c7a9b
+if (version_ge $GOLANG_VERSION "1.7"); then
+	patch -p1 < /patches/0001-runtime-pass-CLONE_SYSVSEM-to-clone.patch
+fi
+
 # Fix for i386 platforms without MMX instructions
 cd src
 if [[ $ARCH == *"386"* ]] && ( version_ge $GOLANG_VERSION "1.6" ); then
