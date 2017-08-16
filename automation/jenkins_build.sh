@@ -37,6 +37,10 @@ do
 			sed -e s~#{FROM}~resin/amd64-alpine:latest~g \
 				-e s~#{QEMU}~""~g Dockerfile.alpine.tpl > Dockerfile
 		;;
+		'alpine-aarch64')
+			sed -e s~#{FROM}~resin/aarch64-alpine:latest~g \
+				-e s~#{QEMU}~"COPY qemu/qemu-aarch64-static /usr/bin/"~g Dockerfile.alpine.tpl > Dockerfile
+		;;
 	esac
 	docker build -t go-$ARCH-builder .
 	for GO_VERSION in $GO_VERSIONS
