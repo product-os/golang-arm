@@ -5,7 +5,7 @@ set -o pipefail
 # set env var
 GOLANG_VERSION=$1
 # Go 1.4 required to build Go 1.5
-GOROOT_BOOTSTRAP_VERSION=1.4.3
+#GOROOT_BOOTSTRAP_VERSION=1.4.3
 TAR_FILE=go$GOLANG_VERSION.linux-$ARCH.tar.gz
 BUCKET_NAME=$BUCKET_NAME
 
@@ -13,15 +13,7 @@ BUCKET_NAME=$BUCKET_NAME
 function version_ge() { test "$(echo "$@" | tr " " "\n" | sort -V | tail -n 1)" == "$1"; }
 function version_le() { test "$(echo "$@" | tr " " "\n" | sort -V | tail -n 1)" != "$1"; }
 
-# in order to build Go 1.5, need to download Go 1.4 first
-if version_ge $GOLANG_VERSION "1.5"; then
-	mkdir /go-bootstrap
-	wget http://resin-packages.s3.amazonaws.com/golang/v$GOROOT_BOOTSTRAP_VERSION/go$GOROOT_BOOTSTRAP_VERSION.linux-$ARCH.tar.gz
-	echo "$(grep " go$GOROOT_BOOTSTRAP_VERSION.linux-$ARCH.tar.gz" /checksums-commit-table)" | sha256sum -c -
-	tar -xzf "go$GOROOT_BOOTSTRAP_VERSION.linux-$ARCH.tar.gz" -C /go-bootstrap --strip-components=1
-	rm go$GOROOT_BOOTSTRAP_VERSION.linux-$ARCH.tar.gz
-	export GOROOT_BOOTSTRAP=/go-bootstrap
-fi
+export GOROOT_BOOTSTRAP=$(go env GOROOT)
 
 case "$ARCH" in
 	'armv6hf')
