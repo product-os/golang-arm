@@ -1,0 +1,39 @@
+From 2673f9ed23348c634f6331ee589d489e4d9c7a9b Mon Sep 17 00:00:00 2001
+From: Austin Clements <austin@google.com>
+Date: Wed, 12 Jul 2017 10:12:50 -0600
+Subject: [PATCH] runtime: pass CLONE_SYSVSEM to clone
+
+SysV semaphore undo lists should be shared by threads, just like
+several other resources listed in cloneFlags. Currently we don't do
+this, but it probably doesn't affect anything because 1) probably
+nobody uses SysV semaphores from Go and 2) Go-created threads never
+exit until the process does. Beyond being the right thing to do,
+user-level QEMU requires this flag because it depends on glibc to
+create new threads and glibc uses this flag.
+
+Fixes #20763.
+
+Change-Id: I1d1dafec53ed87e0f4d4d432b945e8e68bb72dcd
+Reviewed-on: https://go-review.googlesource.com/48170
+Run-TryBot: Austin Clements <austin@google.com>
+TryBot-Result: Gobot Gobot <gobot@golang.org>
+Reviewed-by: Brad Fitzpatrick <bradfitz@golang.org>
+---
+ src/runtime/os_linux.go | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/runtime/os_linux.go b/src/runtime/os_linux.go
+index a6efc0e..7889973 100644
+--- a/src/runtime/os_linux.go
++++ b/src/runtime/os_linux.go
+@@ -132,6 +132,7 @@ const (
+ 		_CLONE_FS | /* share cwd, etc */
+ 		_CLONE_FILES | /* share fd table */
+ 		_CLONE_SIGHAND | /* share sig handler table */
++		_CLONE_SYSVSEM | /* share SysV semaphore undo lists (see issue #20763) */
+ 		_CLONE_THREAD /* revisit - okay for now */
+ )
+ 
+-- 
+2.7.4
+
