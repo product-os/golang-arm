@@ -25,7 +25,7 @@ case "$ARCH" in
 	'armel')
 		export GOARM=5
 	;;
-	'aarch64')
+	'aarch64'|'alpine-aarch64')
 		export GOARCH=arm64
 	;;
 	'alpine-armhf')
