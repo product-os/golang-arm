@@ -1,4 +1,4 @@
-From fae0506b55c928addc566023cb40cfd7da997e39 Mon Sep 17 00:00:00 2001
+From bdbbd45f9d2626cba3d7bc1504a534e9388cfd7d Mon Sep 17 00:00:00 2001
 From: Petros Angelatos <petrosagg@gmail.com>
 Date: Tue, 18 Oct 2016 08:13:44 -0700
 Subject: [PATCH 2/2] implement atomic quadword ops with FILD/FISTP
@@ -10,7 +10,7 @@ Signed-off-by: Petros Angelatos <petrosagg@gmail.com>
  2 files changed, 16 insertions(+), 25 deletions(-)
 
 diff --git a/src/runtime/internal/atomic/asm_386.s b/src/runtime/internal/atomic/asm_386.s
-index 357d830..bf40433 100644
+index 357d830289..bf4043361f 100644
 --- a/src/runtime/internal/atomic/asm_386.s
 +++ b/src/runtime/internal/atomic/asm_386.s
 @@ -121,12 +121,10 @@ TEXT runtime∕internal∕atomic·Load64(SB), NOSPLIT, $0-12
@@ -49,7 +49,7 @@ index 357d830..bf40433 100644
  	// It can be replaced with MFENCE, but MFENCE was introduced only on the Pentium4 (SSE2).
  	MOVL	$0, AX
 diff --git a/src/sync/atomic/asm_386.s b/src/sync/atomic/asm_386.s
-index f2a13da..c7787a4 100644
+index f2a13dab66..c7787a4d5f 100644
 --- a/src/sync/atomic/asm_386.s
 +++ b/src/sync/atomic/asm_386.s
 @@ -157,12 +157,10 @@ TEXT ·LoadUint64(SB),NOSPLIT,$0-12
@@ -87,5 +87,5 @@ index f2a13da..c7787a4 100644
  	// It can be replaced with MFENCE, but MFENCE was introduced only on the Pentium4 (SSE2).
  	XORL	AX, AX
 -- 
-2.10.0
+2.14.1
 

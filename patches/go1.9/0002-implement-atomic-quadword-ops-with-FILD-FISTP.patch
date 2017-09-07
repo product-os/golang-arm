@@ -1,4 +1,4 @@
-From 9227fcdb95a1bebdbb56f5283dbd16a0ad159c98 Mon Sep 17 00:00:00 2001
+From 588dff58f568680e7a7a1f8d3b2aeebc314cd495 Mon Sep 17 00:00:00 2001
 From: Petros Angelatos <petrosagg@gmail.com>
 Date: Tue, 18 Oct 2016 08:13:44 -0700
 Subject: [PATCH 2/2] implement atomic quadword ops with FILD/FISTP
