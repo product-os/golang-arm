@@ -9,7 +9,7 @@ TAR_FILE=go-linux-$ARCH-bootstrap.tbz
 mkdir /go-bootstrap
 if [[ $ARCH == *"alpine"* ]]; then
 	wget http://resin-packages.s3.amazonaws.com/golang/v1.7/go1.7.linux-alpine-amd64.tar.gz
-	echo "90c4ca24818632f65903490c1637594860a2a27fe731735a7ee1ea28b73a144d  go1.7.linux-alpine-amd64.tar.gz" | sha256sum -c -
+	echo "64ef2c81cdee99784558c7b81f18f5ed71b3452181ec962169310037fd19fbaf  go1.7.linux-alpine-amd64.tar.gz" | sha256sum -c -
 	tar -xzf go1.7.linux-alpine-amd64.tar.gz -C /go-bootstrap --strip-components=1
 	rm go1.7.linux-alpine-amd64.tar.gz
 else
@@ -62,7 +62,7 @@ git checkout "$BOOTSTRAP_COMMIT"
 rm -fr ../../go-linux-*-bootstrap
 GOOS=linux GOARCH=$GOARCH ./bootstrap.bash
 cd /
-if [[ $ARCH == *"alpine"* ]]; then
+if [ $ARCH != $GOARCH ]; then
 	mv go-linux-$GOARCH-bootstrap.tbz go-linux-$ARCH-bootstrap.tbz
 fi
 curl -SLO "http://resin-packages.s3.amazonaws.com/SHASUMS256.txt"
