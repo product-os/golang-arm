@@ -13,7 +13,12 @@ BUCKET_NAME=$BUCKET_NAME
 function version_ge() { test "$(echo "$@" | tr " " "\n" | sort -V | tail -n 1)" == "$1"; }
 function version_le() { test "$(echo "$@" | tr " " "\n" | sort -V | tail -n 1)" != "$1"; }
 
-export GOROOT_BOOTSTRAP=$(go env GOROOT)
+mkdir /go-bootstrap
+wget http://resin-packages.s3.amazonaws.com/golang/bootstrap/go-linux-$ARCH-bootstrap.tbz
+echo "$(grep " go-linux-$ARCH-bootstrap.tbz" /checksums-commit-table)" | sha256sum -c -
+tar -xjf "go-linux-$ARCH-bootstrap.tbz" -C /go-bootstrap --strip-components=1
+rm go-linux-$ARCH-bootstrap.tbz
+export GOROOT_BOOTSTRAP=/go-bootstrap
 
 case "$ARCH" in
 	'armv6hf')

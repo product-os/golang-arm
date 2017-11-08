@@ -9,6 +9,17 @@ d9ba0116db22b9711c36d42649387c6b84cfd932133c0e763a9d1ad770188a81  go1.4.3.linux-
 ### This is a bootstrap ditribution for aarch64
 f7ed449e683f58b6cf3b4ccccd37db6cf7f7e8bcd85852859b707e22ac592002  go1.4.3.linux-aarch64.tar.gz
 
+390caaa091aa68d5357f2a22d6417619ff3bee352209cb31cedb321923adcffa  go-linux-amd64-bootstrap.tbz
+bded08398e09533da3b58e64e3611caaf9ba2a94745c296efb86fd18af5f5bc7  go-linux-alpine-amd64-bootstrap.tbz
+c2cb93cbca8ccbce0a77ef6a37b67596e329569ad6a82f602d15f35137ebeb81  go-linux-i386-bootstrap.tbz
+fe9affa246e6e50c098ebfc51baa762df613446e40ef356db0485abc3c972f2d  go-linux-alpine-i386-bootstrap.tbz
+dec875c292a7a6e399ebb301f3beb63128f8208199f654ff5f10035ee7ab6d4b  go-linux-armv7hf-bootstrap.tbz
+8c9a7769a9514d0ec62d95cd8e7cceee75f74dba5a6c53f5f0af102f67bc23ea  go-linux-armel-bootstrap.tbz
+96facaf2d6a356cf0bc55e925273905f115256616ceb9c51d378d566d8f18d94  go-linux-armv6hf-bootstrap.tbz
+e438698112a359a6d27542a249c1396a2acd5c2bb2eebeadf69e373cb071f612  go-linux-alpine-armhf-bootstrap.tbz
+a6c2e685f7d1d48495b5ca10b490995f369e25fcf87333ee0adcce14208b3bba  go-linux-alpine-aarch64-bootstrap.tbz
+34b5a1dc7327f96aecf33908250a0947d5d925a9813a5056b048216ac44563dc  go-linux-aarch64-bootstrap.tbz
+
 ### Go checksums
 9947fc705b0b841b5938c48b22dc33e9647ec0752bae66e50278df4f23f64959 go1.4.3.src.tar.gz
 754e06dab1c31ab168fc9db9e32596734015ea9e24bc44cae7f237f417ce4efe go1.5.3.src.tar.gz
@@ -30,3 +41,4 @@ a96cce8ce43a9bf9b2a4c7d470bc7ee0cb00410da815980681c8353218dcf146 go1.6.src.tar.g
 5f5dea2447e7dcfdc50fa6b94c512e58bfba5673c039259fd843f68829d99fa6 go1.8.3.src.tar.gz
 
 a4ab229028ed167ba1986825751463605264e44868362ca8e7accc8be057e993 go1.9.src.tar.gz
+a84afc9dc7d64fe0fa84d4d735e2ece23831a22117b50dafc75c1484f1cb550e go1.9.1.src.tar.gz
