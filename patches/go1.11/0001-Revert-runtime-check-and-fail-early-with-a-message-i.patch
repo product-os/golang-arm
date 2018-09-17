@@ -1,0 +1,30 @@
+From f63b3ed7c61f84e1085ce5afa9408baf58cab5ca Mon Sep 17 00:00:00 2001
+From: Petros Angelatos <petrosagg@gmail.com>
+Date: Thu, 7 Sep 2017 11:57:51 +0300
+Subject: [PATCH 1/2] Revert "runtime: check and fail early with a message if
+ MMX is not available on 386"
+
+This reverts commit 35e84546d7c3cc599dd5bf31ad86bf8d3d841d04.
+
+Signed-off-by: Petros Angelatos <petrosagg@gmail.com>
+---
+ src/runtime/asm_386.s | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/src/runtime/asm_386.s b/src/runtime/asm_386.s
+index 5bbf2866f3..6c4a2ac7bf 100644
+--- a/src/runtime/asm_386.s
++++ b/src/runtime/asm_386.s
+@@ -77,9 +77,6 @@ notintel:
+ 	MOVL	CX, DI // Move to global variable clobbers CX when generating PIC
+ 	MOVL	AX, runtime·processorVersionInfo(SB)
+ 
+-	// Check for MMX support
+-	TESTL	$(1<<23), DX // MMX
+-	JZ	bad_proc
+ 
+ 	TESTL	$(1<<26), DX // SSE2
+ 	SETNE	runtime·support_sse2(SB)
+-- 
+2.14.1
+
