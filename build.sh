@@ -41,6 +41,7 @@ case "$ARCH" in
 		export GOHOSTARCH=386
 	;;
 	'i386')
+		export GO386=387
 		export GOARCH=386
 		export GOHOSTARCH=386
 	;;
@@ -76,13 +77,7 @@ if (version_ge $GOLANG_VERSION "1.7") && (version_le $GOLANG_VERSION "1.8"); the
 	patch -p1 < /patches/0001-runtime-pass-CLONE_SYSVSEM-to-clone.patch
 fi
 
-# Fix for i386 platforms without MMX instructions
 cd src
-if [[ $ARCH == *"386"* ]] && ( version_ge $GOLANG_VERSION "1.6" ); then
-	patch -p2 -i /patches/go$(expr match "$GOLANG_VERSION" '\([0-9]*\.[0-9]*\)')/0001-Revert-runtime-check-and-fail-early-with-a-message-i.patch
-	patch -p2 -i /patches/go$(expr match "$GOLANG_VERSION" '\([0-9]*\.[0-9]*\)')/0002-implement-atomic-quadword-ops-with-FILD-FISTP.patch
-fi
-
 ./make.bash --no-clean 2>&1 \
 	&& cd / \
 	&& tar -cvzf $TAR_FILE go/*
