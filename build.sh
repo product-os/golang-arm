@@ -21,10 +21,10 @@ rm go-linux-$ARCH-bootstrap.tbz
 export GOROOT_BOOTSTRAP=/go-bootstrap
 
 case "$ARCH" in
-	'armv6hf')
+	'armv6hf'|'alpine-armv6hf')
 		export GOARM=6
 	;;
-	'armv7hf')
+	'armv7hf'|'alpine-armv7hf')
 		export GOARM=7
 	;;
 	'armel')
@@ -32,9 +32,6 @@ case "$ARCH" in
 	;;
 	'aarch64'|'alpine-aarch64')
 		export GOARCH=arm64
-	;;
-	'alpine-armhf')
-		export GOARM=7
 	;;
 	'alpine-i386')
 		export GOARCH=386
