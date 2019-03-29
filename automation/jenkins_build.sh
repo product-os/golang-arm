@@ -25,8 +25,8 @@ do
 			sed -e s~#{FROM}~balenalib/i386-debian:jessie~g \
 				-e s~#{QEMU}~""~g Dockerfile.debian.tpl > Dockerfile
 		;;
-		'alpine-armhf')
-			sed -e s~#{FROM}~balenalib/armv7hf-alpine:3.6~g \
+		'alpine-armv6hf')
+			sed -e s~#{FROM}~balenalib/rpi-alpine:3.6~g \
 				-e s~#{QEMU}~"COPY qemu/qemu-arm-static /usr/bin/"~g Dockerfile.alpine.tpl > Dockerfile
 		;;
 		'alpine-i386')
@@ -40,6 +40,11 @@ do
 		'alpine-aarch64')
 			sed -e s~#{FROM}~balenalib/aarch64-alpine:3.6~g \
 				-e s~#{QEMU}~"COPY qemu/qemu-aarch64-static /usr/bin/"~g Dockerfile.alpine.tpl > Dockerfile
+		;;
+		'alpine-armv7hf')
+			# armv7hf-alpine v3.9 and later are armv7
+			sed -e s~#{FROM}~balenalib/armv7hf-alpine:3.9~g \
+				-e s~#{QEMU}~"COPY qemu/qemu-arm-static /usr/bin/"~g Dockerfile.alpine.tpl > Dockerfile
 		;;
 	esac
 	docker build -t go-$ARCH-builder .
