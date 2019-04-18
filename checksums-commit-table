@@ -19,6 +19,7 @@ dec875c292a7a6e399ebb301f3beb63128f8208199f654ff5f10035ee7ab6d4b  go-linux-armv7
 e438698112a359a6d27542a249c1396a2acd5c2bb2eebeadf69e373cb071f612  go-linux-alpine-armhf-bootstrap.tbz
 a6c2e685f7d1d48495b5ca10b490995f369e25fcf87333ee0adcce14208b3bba  go-linux-alpine-aarch64-bootstrap.tbz
 34b5a1dc7327f96aecf33908250a0947d5d925a9813a5056b048216ac44563dc  go-linux-aarch64-bootstrap.tbz
+c2cb93cbca8ccbce0a77ef6a37b67596e329569ad6a82f602d15f35137ebeb81  go-linux-i386-nlp-bootstrap.tbz
 
 ### Go checksums
 9947fc705b0b841b5938c48b22dc33e9647ec0752bae66e50278df4f23f64959 go1.4.3.src.tar.gz
