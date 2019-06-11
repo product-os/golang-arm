@@ -25,6 +25,10 @@ do
 			sed -e s~#{FROM}~balenalib/i386-debian:jessie~g \
 				-e s~#{QEMU}~""~g Dockerfile.debian.tpl > Dockerfile
 		;;
+		'i386-nlp')
+			sed -e s~#{FROM}~balenalib/i386-nlp-debian:jessie~g \
+				-e s~#{QEMU}~""~g Dockerfile.debian.tpl > Dockerfile
+		;;
 		'alpine-armv6hf')
 			sed -e s~#{FROM}~balenalib/rpi-alpine:3.6~g \
 				-e s~#{QEMU}~"COPY qemu/qemu-arm-static /usr/bin/"~g Dockerfile.alpine.tpl > Dockerfile

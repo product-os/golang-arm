@@ -37,7 +37,7 @@ case "$ARCH" in
 		export GOARCH=386
 		export GOHOSTARCH=386
 	;;
-	'i386')
+	'i386-nlp')
 		export GO386=387
 		export GOARCH=386
 		export GOHOSTARCH=386
