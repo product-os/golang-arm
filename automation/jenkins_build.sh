@@ -30,19 +30,19 @@ do
 				-e s~#{QEMU}~""~g Dockerfile.debian.tpl > Dockerfile
 		;;
 		'alpine-armv6hf')
-			sed -e s~#{FROM}~balenalib/rpi-alpine:3.6~g \
+			sed -e s~#{FROM}~balenalib/rpi-alpine:3.9~g \
 				-e s~#{QEMU}~"COPY qemu/qemu-arm-static /usr/bin/"~g Dockerfile.alpine.tpl > Dockerfile
 		;;
 		'alpine-i386')
-			sed -e s~#{FROM}~balenalib/i386-alpine:3.6~g \
+			sed -e s~#{FROM}~balenalib/i386-alpine:3.9~g \
 				-e s~#{QEMU}~""~g Dockerfile.alpine.tpl > Dockerfile
 		;;
 		'alpine-amd64')
-			sed -e s~#{FROM}~balenalib/amd64-alpine:3.6~g \
+			sed -e s~#{FROM}~balenalib/amd64-alpine:3.9~g \
 				-e s~#{QEMU}~""~g Dockerfile.alpine.tpl > Dockerfile
 		;;
 		'alpine-aarch64')
-			sed -e s~#{FROM}~balenalib/aarch64-alpine:3.6~g \
+			sed -e s~#{FROM}~balenalib/aarch64-alpine:3.9~g \
 				-e s~#{QEMU}~"COPY qemu/qemu-aarch64-static /usr/bin/"~g Dockerfile.alpine.tpl > Dockerfile
 		;;
 		'alpine-armv7hf')
