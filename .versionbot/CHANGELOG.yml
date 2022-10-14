@@ -1,0 +1,1240 @@
+- commits:
+    - subject: Switch from BalenaCi to Flowzone
+      hash: 089a7d5a80cb394df6e1c9d77877bd10f871299d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+      author: Trong Nghia Nguyen
+      nested: []
+  version: 0.1.30
+  title: ""
+  date: 2022-10-14T02:04:42.300Z
+- version: 0.1.29
+  date: 2022-09-26T15:28:43Z
+  commits:
+    - hash: 3a2b2b5d7e4966f58b73e9a901577408b6e01c96
+      author: Trong Nghia Nguyen
+      footers:
+        change-type: patch
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+      subject: Add build info for v1.19.1 and v1.18.6
+      body: null
+- version: 0.1.28
+- date: 2022-08-17T10:42:35Z
+- commits:
+    - hash: 8d4dac81e8c83bdfd04ffd043aa249070cb70e6c
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for Go v1.18.5 and v1.19
+- commits:
+    - body: null
+- version: 0.1.27
+- date: 2022-07-13T18:25:54Z
+- commits:
+    - hash: 49ce087c7662f048380b32f4af3f08c8c2dfdf0c
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.18.4 and v1.17.12
+- commits:
+    - body: null
+- version: 0.1.26
+- date: 2022-06-02T05:26:12Z
+- commits:
+    - hash: 4fee30d4264045496f950fcc5e4dd4048c514f3b
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.17.11 and v1.18.3
+- commits:
+    - body: null
+- version: 0.1.25
+- date: 2022-05-11T01:42:47Z
+- commits:
+    - hash: b5b474aab5a6e83a9ee29fd28c20d84c59fc7cfa
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info v1.18.2 v1.17.10
+- commits:
+    - body: null
+- version: 0.1.24
+- date: 2022-04-20T03:48:57Z
+- commits:
+    - hash: 6f7d81d4fe94046a6b437403983d85c3ab357be7
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.18.1 and v1.17.9
+- commits:
+    - body: null
+- version: 0.1.23
+- date: 2022-03-18T02:49:05Z
+- commits:
+    - hash: 3e56e4587bc9519a4904e0199978989e8653d217
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for go v1.18
+- commits:
+    - body: null
+- version: 0.1.22
+- date: 2022-03-11T02:58:26Z
+- commits:
+    - hash: fb4bac288be48b412c2626e1209fc8ce2d5130c1
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.17.8 and v1.16.15
+- commits:
+    - body: null
+- version: 0.1.21
+- date: 2022-02-23T11:14:00Z
+- commits:
+    - hash: a513a5a217b627a9909e5f6a4d7a92cc37b113cc
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Update dependencies for Alpine builder image
+- commits:
+    - body: null
+- version: 0.1.20
+- date: 2022-02-23T03:28:48Z
+- commits:
+    - hash: 22a83d2735097215b518c41f8492adc649a8c73d
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.16.14 and v1.17.7
+- commits:
+    - body: null
+- version: 0.1.19
+- date: 2022-01-11T06:06:31Z
+- commits:
+    - hash: 8243afabc91f74e1d5ae2ca58e0ddb9214c1c8a4
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Update base version for Debian and Alpine Linux base image
+- commits:
+    - body: Update to Debian Buster and Alpine Linux 3.13
+- commits:
+    - hash: 6673334df04da00125ec71fe1339aee0564c7d4c
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Merge branch 'master' into base-image-update
+- commits:
+    - body: null
+- version: 0.1.18
+- date: 2022-01-11T05:39:50Z
+- commits:
+    - hash: 42a960805bddd17681c233c7a2647b8faeb7baaa
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.17.6 and v1.16.13
+- commits:
+    - body: null
+- version: 0.1.17
+- date: 2021-12-20T13:44:29Z
+- commits:
+    - hash: d0b7791e8bca6ed2dfc59fd7d31adc89c573428b
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for golang v1.17.5 and v1.16.12
+- commits:
+    - body: null
+- version: 0.1.16
+- date: 2021-12-06T05:13:25Z
+- commits:
+    - hash: 76987d9fd3f15a22aad08ad427d720387cdd8d09
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for Golang v1.17.4 and v1.16.11
+- commits:
+    - body: null
+- version: 0.1.15
+- date: 2021-10-28T07:14:46Z
+- commits:
+    - hash: 1002cacc52d3273bc064cab2c9880a7418c6070d
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.17.2 and v1.16.9
+- commits:
+    - body: null
+- version: 0.1.14
+- date: 2021-09-23T04:17:26Z
+- commits:
+    - hash: 703d1119cef84b07eb84cb98e1d7dc83e0c16e7f
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for golang v1.17.1 and v1.16.8
+- commits:
+    - body: null
+- version: 0.1.13
+- date: 2021-08-24T18:11:44Z
+- commits:
+    - hash: 527c8cb39224093f54e8ab4043744b5125be508e
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Fix wrong checksum for go v1.17
+- commits:
+    - body: null
+- version: 0.1.12
+- date: 2021-08-24T16:55:04Z
+- commits:
+    - hash: 35c6e2a7e39c3e0a15a739005c63d6a8e27b12c7
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for Golang v1.17
+- commits:
+    - body: null
+- version: 0.1.11
+- date: 2021-08-12T02:00:51Z
+- commits:
+    - hash: a953e271ea4d505ffe08d6966340d9bc51164d49
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.16.7 and v1.15.15
+- commits:
+    - body: null
+- version: 0.1.10
+- date: 2021-08-02T09:00:56Z
+- commits:
+    - hash: 90132a4c8de80776628fcf5f6cefd6d202bd9cf4
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.16.5 and v1.15.13
+- commits:
+    - body: null
+- commits:
+    - hash: 04c80aaf3167e4b5e3a4705296c07f163f2e569b
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Merge remote-tracking branch 'upstream/master' into master
+- commits:
+    - body: null
+- commits:
+    - hash: 40c457f5209b9d9044a30c1bef983ca740163d43
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.16.6 and v1.15.14
+- commits:
+    - body: null
+- version: 0.1.9
+- date: 2021-06-30T16:48:06Z
+- commits:
+    - hash: edd9ae5a0169f273820500437128b42c4698fd84
+- commits:
+    - author: Lucian Buzzo
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+- commits:
+    - subject: Delete CODEOWNERS
+- commits:
+    - body: "\r
+
+        See
+        https://www.flowdock.com/app/rulemotion/pub/threads/trLcZFnSX9fLZn4LiaI\
+        v4xuBbah\r
+
+        \r"
+- commits:
+    - hash: 51b6dcb9cefd3cfeb15b51a5121336e64402386c
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for Go v1.15.11 and v1.16.3
+- commits:
+    - body: null
+- version: 0.1.8
+- date: 2021-02-22T14:48:11Z
+- commits:
+    - hash: 59005873451c3b9ecdf19fde569f60fa10e35f21
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for Go v1.15.8 and v1.16
+- commits:
+    - body: null
+- version: 0.1.7
+- date: 2021-01-27T04:09:01Z
+- commits:
+    - hash: 598b167e2f8ee792caccbe9a1ffe6cb868e1fa37
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for Go v1.15.7 and 1.14.14
+- commits:
+    - body: null
+- commits:
+    - hash: 8a26326a724a4c1feab22e8636fc6da00691be73
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for Go v1.15.6 and v1.14.13
+- commits:
+    - body: null
+- version: 0.1.6
+- date: 2020-10-29T10:11:42Z
+- commits:
+    - hash: f62f059d518c54f9b088ffb5a2a78a91dbff4885
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.15.3 and v1.14.10
+- commits:
+    - body: null
+- commits:
+    - hash: 403638a11b74eb31d0c876872a7c6670e2e3f13f
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Merge branch 'master' into master
+- commits:
+    - body: null
+- version: 0.1.5
+- date: 2020-09-11T10:45:49Z
+- commits:
+    - hash: 832dbd1df336aaf7425fa8dff76fa474ac8ffda0
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.15.2 and v1.14.9
+- commits:
+    - body: null
+- version: 0.1.4
+- date: 2020-08-31T14:00:47Z
+- commits:
+    - hash: 15beddc81f95117a0a64598bb5b4b34e0c11333a
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Update checksum for v1.14.7
+- commits:
+    - body: null
+- commits:
+    - hash: fcb43d74f248738de2431a78794d547a6fe571f6
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for golang v1.14.7 and v1.15
+- commits:
+    - body: null
+- version: 0.1.3
+- date: 2020-07-30T19:20:25Z
+- commits:
+    - hash: 755d49cf78529050e3f0e6445d8ec252b816702c
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.14.6 and v1.13.14
+- commits:
+    - body: null
+- commits:
+    - hash: d7c6faa4026d9edd75dc8cf4a5cf7b7db727c1aa
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Merge branch 'master' into master
+- commits:
+    - body: null
+- commits:
+    - hash: e8e2ae1014c49ce3443ede0fdec52514c6fb48ac
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.14.4 and v1.13.12
+- commits:
+    - body: null
+- commits:
+    - hash: ef79984257065f40dea7d1cdea05a0d918e3e07e
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for v1.14.2 and v1.13.10
+- commits:
+    - body: null
+- commits:
+    - hash: 67bccaa73f5d90ea88ea9dfb3cf1bebbb16b6140
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: Add build info for Go v1.14
+- commits:
+    - body: null
+- commits:
+    - hash: 7798652dfee2c1ba38d445296527102708eb1c54
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "golang: Add build info for v1.13.8 and v1.12.17"
+- commits:
+    - body: null
+- commits:
+    - hash: 5a5b9270cd2e213009768ba9ee9b158b216dd973
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "alpine: Change the base image to 3.9"
+- commits:
+    - body: null
+- commits:
+    - hash: 68c23db89b32c4557b8668850d961eeb90762bf0
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Merge branch 'master' into master
+- commits:
+    - body: null
+- commits:
+    - hash: a8557132e92a91e5a2b562de0da4585aec85da20
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "go: Add build info for v1.13.6 and v1.12.15"
+- commits:
+    - body: null
+- version: 0.1.2
+- date: 2020-01-10T16:20:20Z
+- commits:
+    - hash: dc87a27ad33fb5c9b1ba2e96415ffd2deff927c0
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "golang: Add build info for v1.13.5 and v1.12.14"
+- commits:
+    - body: null
+- version: 0.1.1
+- date: 2019-11-19T06:01:29Z
+- commits:
+    - hash: e3f77a652ddd26e3098f4e369d909ca6872ee246
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "go: Add build info for v1.13.4 and v1.12.13"
+- commits:
+    - body: null
+- commits:
+    - hash: d2595c42f0acabbe2a00738d1d59410516f88093
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "go: Add build info for v1.13.3 and v1.12.12"
+- commits:
+    - body: null
+- commits:
+    - hash: 62eeef881f3d030951da406b04b1b30ba92f8bf6
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Merge branch 'master' into master
+- commits:
+    - body: null
+- version: 0.1.0
+- date: 2019-10-07T08:37:25Z
+- commits:
+    - hash: f8d6099b0c06fabd53c1b2481e1f65a2b41c7734
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "go: Add build info for v1.13.1 and v1.12.10"
+- commits:
+    - body: null
+- commits:
+    - hash: 11281ef6c3fa74a18b4551dc09f3ea7499ccebbe
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "go: Add build info for v1.12.9 and v1.11.13"
+- commits:
+    - body: null
+- commits:
+    - hash: 4f11611046c77c089519e6d30f0f792831a68002
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "housekeeping: Add codeowners, repo type and versionbot"
+- commits:
+    - body: null
+- commits:
+    - hash: 906421e3155cc8ec42d1b22edfccf68db0e0cba0
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Merge branch 'master' into new-version-support
+- commits:
+    - body: null
+- commits:
+    - hash: c72b4c31cc42d73d93a16a7eaaf663f5a01760e1
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "go: Add build info for v1.12.7 and v1.11.12"
+- commits:
+    - body: null
+- commits:
+    - hash: 7bf174f4e4c20f834751b3b891170536c7fadc61
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "go: Add build info for v1.12.6 and v1.11.11"
+- commits:
+    - body: null
+- commits:
+    - hash: a0a819340890dc2e9d4d4f4cf917e3fc7a61c543
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "golang: Add build info for i386-nlp arch"
+- commits:
+    - body: null
+- commits:
+    - hash: 25f8009be72f5ca552451f6e7b7546146b6e10eb
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "go: Add build info for v1.12.5 and v1.11.10"
+- commits:
+    - body: null
+- commits:
+    - hash: fb4eafb38091a46fec6093d638addacdb5f43ac8
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "readme: Add README"
+- commits:
+    - body: null
+- commits:
+    - hash: aa7ca1129566d623902b56858abefa34b29c001a
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "golang: Add build info for Golang v1.12.4 and v1.11.9"
+- commits:
+    - body: null
+- commits:
+    - hash: 8af368f9665437894b83dcf0097c4c4be0cb85f4
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "alpine: Add support for armv7 Alpine Linux"
+- commits:
+    - body: Since armv7 Alpine Linux is released, the build script is updated to
+        support this architecture
+- commits:
+    - hash: b3a5de9bffe5186852438d9290e76b78e31569e8
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "golang: Add build info for Golang v1.11.6 and v1.12.1"
+- commits:
+    - body: null
+- commits:
+    - hash: 4c6122cbda3358c8d6cf2a40f6399b9537bddfdd
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "golang: Add build info for v1.12"
+- commits:
+    - body: null
+- commits:
+    - hash: ff0ff9330dce041554bbd438490003eb9e57fe09
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Merge branch 'master' into master
+- commits:
+    - body: null
+- commits:
+    - hash: 384ef06c79fa80b01227372ac0b4748d5f0e8212
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "go386: set GO386=387 so i386 binary will support all x86 chips"
+- commits:
+    - body: null
+- commits:
+    - hash: ae7350dbfb06e48c85019238e715f2d12fd4ab14
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "golang: Add build info for new Golang versions"
+- commits:
+    - body: v1.11.4 and v1.10.7
+- commits:
+    - hash: fd6151fddd26f63450b6353b14ec308aa20c8325
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "golang: Add build info for v1.11.5 and v1.10.8"
+- commits:
+    - body: null
+- commits:
+    - hash: 4fc9a7e04446df2034f76ae1ce6535afc9eefae8
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Merge branch 'master' into master
+- commits:
+    - body: null
+- commits:
+    - hash: b0eb37ca443e5617fc9ee10d4831d863a0a1e73e
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "golang: Add build info for Go v1.11.2 and v1.10.5"
+- commits:
+    - body: null
+- commits:
+    - hash: 34c0b153d80fa6a575d4d0dd87e24c15987bdc64
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Merge branch 'master' into master
+- commits:
+    - body: null
+- commits:
+    - hash: e0fdb0912ec24bc6f96e39d046b7b45171fa9253
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "golang: Add build info for v1.11.1"
+- commits:
+    - body: null
+- commits:
+    - hash: 0c60b13ea4179d853c18f12ae1481e1e67eedf61
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "baseimage: Change base images namespace to balenalib"
+- commits:
+    - body: null
+- commits:
+    - hash: f3ac114b4f3ee1b6dfff23dc93158e2eab0f9eba
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - footers:
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+- commits:
+    - subject: "go: Add build info for v1.10.4 and v1.11"
+- commits:
+    - body: null
+- commits:
+    - hash: 31acbf6b9fadb48f50a14e931e9e105337b8b4ee
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Merge branch 'master' into master
+- commits:
+    - body: null
+- commits:
+    - hash: bd0fe1c2f1fb11bb7ef7499203c26d743f7a3822
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add build info for go v1.9.7 and v1.10.3
+- commits:
+    - body: null
+- commits:
+    - hash: b67f9c526d43faa44cbc24b684ec4d1a2d52ac85
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add build info for Go v1.10.2 and v1.9.6
+- commits:
+    - body: null
+- commits:
+    - hash: 65d9c34c7b7d54d56fdef45d05bab096156ba92f
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add public key for jessie-backports
+- commits:
+    - body: null
+- commits:
+    - hash: a2872a4531049415bc45f69e03b0056fa97d9ee9
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add Go v1.10 build info
+- commits:
+    - body: null
+- commits:
+    - hash: 476713d306339497421d9c6b1a767af8bb6952b5
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add Go v1.9.4 and v1.8.7
+- commits:
+    - body: null
+- commits:
+    - hash: b01e38a2038e51518d1d61cf350515b0e6b1eb40
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add build info for Golang v1.8.5 and v1.9.2
+- commits:
+    - body: null
+- commits:
+    - hash: 378aa7dc3c1e97a6d1b8a7190175bc7f406441dd
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add build script to generate go-bootstrap
+- commits:
+    - body: null
+- commits:
+    - hash: 071774fa6b7d67698b061ee4107f0c3ef7e6b4de
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Switch to new Go bootstrap binaries
+- commits:
+    - body: null
+- commits:
+    - hash: b370577fe35169b43a40e34a597b30b26ff773cf
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add Go v1.9.1
+- commits:
+    - body: null
+- commits:
+    - hash: d4973d8076001772c7f5d44058b9a838654a4718
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: "Apply the patch for #20763 only on Go v1.7 and v1.8"
+- commits:
+    - body: null
+- commits:
+    - hash: d63f80f3fba43882f6fd9a210458e31719dfc35f
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Install golang-go package from jessie-backports to make sure Go version
+        > 1.4
+- commits:
+    - body: null
+- commits:
+    - hash: 1ad05bdeb0fa805ea117d94437a90c102b711e3f
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add build configuration for alpine-aarch64
+- commits:
+    - body: null
+- commits:
+    - hash: 71cd9dea474435171ac4d75aaf417ea324ea7fe1
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Update the mmx patches
+- commits:
+    - body: null
+- commits:
+    - hash: b79ff77f4f3834349ca7ac578120bad9f8238aa6
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add Golang v1.7.6 and v1.8.3
+- commits:
+    - body: null
+- commits:
+    - hash: df155921c8dbd517700723bf2e8d667bcbbde6ce
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: "Add patch to fix runtime: failed to create new OS thread bug when
+        cross-compile ARM Go binary"
+- commits:
+    - body: null
+- commits:
+    - hash: 61783009a12a88180fbc6907fd5dba336ee6f10f
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Use QEMU v2.7.0-resin-rc3 when building Go binary.
+- commits:
+    - body: There is an issue of QEMU v2.9.0 and Go so we can not use that version to
+        build the binary (ref https://github.com/golang/go/issues/20763)
+- commits:
+    - hash: 233f2f0254998c6baa9c67ce037b7ee990c28904
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add build info for aarch64-alpine
+- commits:
+    - body: null
+- commits:
+    - hash: f48109304d1a2e17fd611b94ed5311144d684e9c
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Update build script for aarch64 support.
+- commits:
+    - body: use Go package from each distro as bootstrapping for the build script
+        since aarch64 does not have official go binaries
+- commits:
+    - hash: 5af8cedb06750dd9440de92f16b42cd0069e1698
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add Golang v1.9
+- commits:
+    - body: null
+- commits:
+    - hash: b3a4951082c81006f9af0577e311fccb135a2144
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add Golang v1.7.5 and v1.8
+- commits:
+    - body: null
+- commits:
+    - hash: 63fd5016ec3137b551fa83b5e9cd4ebd966bdbd1
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add Golang v1.7.4 and v1.6.4
+- commits:
+    - body: null
+- commits:
+    - hash: 5f04903a4d99f11a7a5cfa0769512cd065d57515
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add build info for patching i386 golang binaries to support new board
+- commits:
+    - body: null
+- commits:
+    - hash: 045a9edeb5e4f48cdaaa138b7a9305049199a1f0
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add Go v1.7.1 and v.1.7.3
+- commits:
+    - body: null
+- commits:
+    - hash: 1f2a8bb529e16df7804a07ac0e7dbfb3570aa6d2
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add build info for aarch64
+- commits:
+    - body: null
+- commits:
+    - hash: f8e27d4a37f2f0e742513993565b16b335526ace
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add go v1.7
+- commits:
+    - body: null
+- commits:
+    - hash: 30eaa388d318697b1826976d044561ef2a4459ee
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Build from source file instead of git repository
+- commits:
+    - body: null
+- commits:
+    - hash: 89fe80a5fb66af48f88ffd9cc236ef93c33d828a
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add Golang v1.6.3
+- commits:
+    - body: null
+- commits:
+    - hash: 5dd05d7fe3cad29f2226c32617d6f7f87588a870
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Clean up builder base image after every run
+- commits:
+    - body: null
+- commits:
+    - hash: 5106813ebbfac2c29b83af5f01f9b257b371dd1b
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: add -fno-PIC when using external linker on alpine for go v1.5 and higher
+- commits:
+    - body: null
+- commits:
+    - hash: 9f2e4f2fc014b6e1519988a689269fe815cb76d8
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Add Go v1.5.4, v1.6.1 and v1.6.2
+- commits:
+    - body: null
+- commits:
+    - hash: f12e4eb12b70284334fb59922745ba6806a7ddcc
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Update binary names follow official format
+- commits:
+    - body: null
+- commits:
+    - hash: 82b3a438ec1ff04b4e3feb7f68e8badaf31054d5
+- commits:
+    - author: Trong Nghia Nguyen
+- commits:
+    - subject: Fix name of version comparing function
+- commits:
+    - body: null
