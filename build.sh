@@ -4,8 +4,7 @@ set -o pipefail
 
 # set env var
 GOLANG_VERSION=$1
-# Go 1.4 required to build Go 1.5
-#GOROOT_BOOTSTRAP_VERSION=1.4.3
+GOROOT_BOOTSTRAP_VERSION=1.18.9
 TAR_FILE=go$GOLANG_VERSION.linux-$ARCH.tar.gz
 BUCKET_NAME=$BUCKET_NAME
 
@@ -13,36 +12,60 @@ BUCKET_NAME=$BUCKET_NAME
 function version_ge() { test "$(echo "$@" | tr " " "\n" | sort -V | tail -n 1)" == "$1"; }
 function version_le() { test "$(echo "$@" | tr " " "\n" | sort -V | tail -n 1)" != "$1"; }
 
-mkdir /go-bootstrap
-wget http://resin-packages.s3.amazonaws.com/golang/bootstrap/go-linux-$ARCH-bootstrap.tbz
-echo "$(grep " go-linux-$ARCH-bootstrap.tbz" /checksums-commit-table)" | sha256sum -c -
-tar -xjf "go-linux-$ARCH-bootstrap.tbz" -C /go-bootstrap --strip-components=1
-rm go-linux-$ARCH-bootstrap.tbz
-export GOROOT_BOOTSTRAP=/go-bootstrap
-
 case "$ARCH" in
-	'armv6hf'|'alpine-armv6hf')
+	'armv6hf')
 		export GOARM=6
+		curl -SL -o go-bootstrap.tar.gz "https://storage.googleapis.com/golang/go$GOROOT_BOOTSTRAP_VERSION.linux-armv6l.tar.gz"
+		GOROOT_BOOTSTRAP_CHECKSUM=e01ef720700e1b198391e88dfca3d3b0e744c88348d0cc5ff560edf42555cb89
 	;;
-	'armv7hf'|'alpine-armv7hf')
+	'armv7hf')
 		export GOARM=7
+		curl -SL -o go-bootstrap.tar.gz "http://resin-packages.s3.amazonaws.com/golang/v$GOROOT_BOOTSTRAP_VERSION/go$GOROOT_BOOTSTRAP_VERSION.linux-armv7hf.tar.gz"
+		GOROOT_BOOTSTRAP_CHECKSUM=63ae0c7e08c8068e19c07707dfb4470f79426cc8bc93aed3717e9a31fa405fc1
 	;;
-	'armel')
-		export GOARM=5
-	;;
-	'aarch64'|'alpine-aarch64')
+	'aarch64')
 		export GOARCH=arm64
+		curl -SL -o go-bootstrap.tar.gz "https://storage.googleapis.com/golang/go$GOROOT_BOOTSTRAP_VERSION.linux-arm64.tar.gz"
+		GOROOT_BOOTSTRAP_CHECKSUM=ae21430756c69c48201c51c3a17ac785613d9616105959a0fb7592e407be8588
+	;;
+	'i386')
+		export GOARCH=386
+		export GOHOSTARCH=386
+		curl -SL -o go-bootstrap.tar.gz "https://storage.googleapis.com/golang/go$GOROOT_BOOTSTRAP_VERSION.linux-386.tar.gz"
+		GOROOT_BOOTSTRAP_CHECKSUM=2d78087a1e9627e69bbd8ed517a8fa37a8a505572dce3b16048458894492ef11
+	;;
+	'alpine-armv6hf')
+		export GOARM=6
+		curl -SL -o go-bootstrap.tar.gz "http://resin-packages.s3.amazonaws.com/golang/v$GOROOT_BOOTSTRAP_VERSION/go$GOROOT_BOOTSTRAP_VERSION.linux-alpine-armv6hf.tar.gz"
+		GOROOT_BOOTSTRAP_CHECKSUM=c4110beadcc72fafae02b2545accf0ae5608c47705024f53928be79e56135366
+	;;
+	'alpine-armv7hf')
+		export GOARM=7
+		curl -SL -o go-bootstrap.tar.gz "http://resin-packages.s3.amazonaws.com/golang/v$GOROOT_BOOTSTRAP_VERSION/go$GOROOT_BOOTSTRAP_VERSION.linux-alpine-armv7hf.tar.gz"
+		GOROOT_BOOTSTRAP_CHECKSUM=41e02efb554818f0f595b3b474c485311c906e4df38a2bdf310139a504737e63
+	;;
+	'alpine-aarch64')
+		export GOARCH=arm64
+		curl -SL -o go-bootstrap.tar.gz "http://resin-packages.s3.amazonaws.com/golang/v$GOROOT_BOOTSTRAP_VERSION/go$GOROOT_BOOTSTRAP_VERSION.linux-alpine-aarch64.tar.gz"
+		GOROOT_BOOTSTRAP_CHECKSUM=3efa111a50257db31b7f9fe0b4e94405d1b5ad8a8217dcbcf0b77c9b375fa8b3
 	;;
 	'alpine-i386')
 		export GOARCH=386
 		export GOHOSTARCH=386
+		curl -SL -o go-bootstrap.tar.gz "http://resin-packages.s3.amazonaws.com/golang/v$GOROOT_BOOTSTRAP_VERSION/go$GOROOT_BOOTSTRAP_VERSION.linux-alpine-i386.tar.gz"
+		GOROOT_BOOTSTRAP_CHECKSUM=e22de72347e723e4a78b7df5fee8d145d607002c2bf37e38f8400c4a97f4ce28
 	;;
-	'i386-nlp')
-		export GO386=387
-		export GOARCH=386
-		export GOHOSTARCH=386
+	'alpine-amd64')
+		curl -SL -o go-bootstrap.tar.gz "http://resin-packages.s3.amazonaws.com/golang/v$GOROOT_BOOTSTRAP_VERSION/go$GOROOT_BOOTSTRAP_VERSION.linux-alpine-amd64.tar.gz"
+		GOROOT_BOOTSTRAP_CHECKSUM=1fac6e07aa24eb130c49ee8215ecbfddbfdac161d0f71534b569e01b5dbc182b
 	;;
 esac
+
+mkdir /go-bootstrap
+export GOROOT_BOOTSTRAP=/go-bootstrap
+echo "$GOROOT_BOOTSTRAP_CHECKSUM  go-bootstrap.tar.gz" | sha256sum -c -
+tar -xzf "go-bootstrap.tar.gz" -C /go-bootstrap --strip-components=1
+rm -f go-bootstrap.tar.gz
 
 # compile Go
 echo "GOARM: $GOARM"
