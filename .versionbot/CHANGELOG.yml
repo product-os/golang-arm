@@ -1,4 +1,18 @@
 - commits:
+    - subject: Use Go v1.18.9 as GOROOT_BOOTSTRAP since v1.20 requires newer version
+      hash: a042c7329df86028543c18efa0ccf3ca5b4b0370
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+        signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+      author: Trong Nghia Nguyen
+      nested: []
+  version: 0.1.36
+  title: ""
+  date: 2023-02-06T06:34:51.244Z
+- commits:
     - subject: Add build info for v1.20
       hash: 4aab19b67d3f90a7bd792278ef910c6d5807eef5
       body: ""
