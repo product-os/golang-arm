@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update flowzone.yml
+      hash: 12cd6b9393d583b255bf0eb262a509ef76d9f9d8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested: []
+  version: 0.1.38
+  title: ""
+  date: 2023-05-31T15:15:45.098Z
+- commits:
     - subject: Add build info for Go v1.20.1 and v1.19.6
       hash: 146455090eba2cfa83619ff1c5ccafa1b5b926c3
       body: ""
