@@ -1,4 +1,4 @@
-FROM debian:latest@sha256:2b9468c8670c5f8365b115776c3390872551d5a5c601b5429232265890f740c7
+FROM debian:latest@sha256:7c83da81e123fa99f00cbffbe5c7c2e1c1bd0f1d458cab6ffc4239bd80ad73da
 
 RUN apt-get -q update \
 		&& apt-get install -y git-core build-essential mercurial gcc libc6-dev curl python python-dev python-pip python-setuptools wget ca-certificates libssl-dev  --no-install-recommends \
