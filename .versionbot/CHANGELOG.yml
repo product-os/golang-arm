@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update dependency flowzonify to v0.4.0
+      hash: 44955a32541c73738d0b685cfec94c4f02da1168
+      body: |
+        Update flowzonify from 0.0.0 to 0.4.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.72
+  title: ""
+  date: 2026-08-25T03:37:16.166Z
+- commits:
     - subject: Update debian:latest Docker digest to f324c7f
       hash: 86c151857c759dbdffc077f0a1a588c879128a38
       body: |
