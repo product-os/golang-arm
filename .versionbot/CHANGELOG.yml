@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update debian:latest Docker digest to 4c25275
+      hash: dd11336c8cd8fd618c61612c989a737068521cac
+      body: |
+        Update debian
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.79
+  title: ""
+  date: 2026-10-21T01:40:17.575Z
+- commits:
     - subject: Update debian:latest Docker digest to 913f670
       hash: 719e9c9b464fed3360187c8ba41204ecfbc48501
       body: |
