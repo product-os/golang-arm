@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update debian:latest Docker digest to 8c4733a
+      hash: affff7950a7008a65fb5fd56f6e925430a0e4543
+      body: |
+        Update debian
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.83
+  title: ""
+  date: 2026-10-28T02:31:26.763Z
+- commits:
     - subject: Update alpine:latest Docker digest to be26560
       hash: 8c3d2042f53a7d2eeaa62a7000f1d62a5dc940ac
       body: |
