@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update debian:latest Docker digest to 2dc419c
+      hash: a2235ac220c45aaadb776b24a0ecfc86dc2da47c
+      body: |
+        Update debian
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 0.1.84
+  title: ""
+  date: 2026-10-28T20:26:56.846Z
+- commits:
     - subject: Update debian:latest Docker digest to 8c4733a
       hash: affff7950a7008a65fb5fd56f6e925430a0e4543
       body: |
