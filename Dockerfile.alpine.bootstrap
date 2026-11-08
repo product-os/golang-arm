@@ -1,4 +1,4 @@
-FROM alpine:latest@sha256:ce9e1e6d23f04a0b7593445a062a9fc73ed52f8260b9396f77a958295ad18ee7
+FROM alpine:latest@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf
 
 RUN apk add --no-cache bash git build-base gcc curl python python-dev py-pip wget ca-certificates musl-dev openssl coreutils
 
